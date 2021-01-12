@@ -9,14 +9,14 @@ def bill():
         ----------------------Reliance - SuperMarket--------------------
         ================================================================   
         """)
-    print("Date:", now.strftime("%d/%m/%Y"))
+    print("Date:", now.strftime("%d/%m/%Y"))#Display time and date
     print("Time:", now.strftime("%H:%M %p"))
     item = {'apple': 12,'orange':200, 'wheat': 150, 'maida': 230,'rava': 100,'semiya': 200,       }
     print("""\n1.View list\n2.Purchase item\n3.Add items\n4.Search item\n5.Delete items  """)
     while True:
         try:
-            u=int(input("\nEnter your choice:"))
-            if u < 6:
+            u=int(input("\nEnter your choice:"))# Enter the valid input 1 o 5
+            if u < 6:# if the input grater then 5 then it execute break and exception
                 break
         except(ValueError,UnboundLocalError):
             print("Enter valid option")
